@@ -99,7 +99,6 @@ class Grid {
       im = images.get(i);
       Point p = imagepoints.get(i);
       image(im, p.x, p.y, iwidth, iheight);
-      //rect(p.x, p.y, iwidth, iheight);
     }
   }
   
@@ -160,7 +159,6 @@ void setup() {
     }
 
     size(displayWidth,displayHeight);
-    //size(800,600);
 
     float imageratio = 3.0/4.0; 
     int rows = 1;
@@ -173,11 +171,6 @@ void setup() {
     int gbox_height = rows*iheight + (rows-1)*vspacing +2*vspacing;
     int gbox_x = (width - gbox_width)/2 + hspacing;
     int gbox_y = height/2 + (height/2-gbox_height)/2 + vspacing;
-
-    // println(rows,cols);
-    // println(iwidth,iheight);
-    // println(gbox_width,gbox_height);
-    // println(gbox_x,gbox_y);
 
     G = new Grid(rows,cols,iwidth,iheight,new Point( gbox_x ,gbox_y),hspacing,vspacing);
     G.arrange();
